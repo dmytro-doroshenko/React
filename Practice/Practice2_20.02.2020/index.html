@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React. Practice 2. 20.02.2020</title>
+    <style>
+        .main {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid black;
+            width: 700px;
+            background-color: beige;
+            box-sizing: border-box;
+        }
+        .avatar {
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+        }
+        .imgInPost {
+            max-width: 680px;
+            height: auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id='root'></div>
+
+    
+
+    <script type="text/babel">
+        const post1 = {
+            name: 'Author One',
+            avatar: './img/avatar1.jpg',
+            date: '20.02.2020',
+            text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione dicta accusamus ad odit veritatis mollitia enim at suscipit ut qui pariatur, assumenda nulla inventore sequi magnam corrupti molestiae, porro saepe.',
+            //img: './img/img1.jpg'
+        };
+
+        const post2 = {
+            name: 'Author Two',
+            avatar: './img/avatar2.jpg',
+            date: '11.02.2020',
+            text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, sed error corrupti fuga itaque totam dolorum nobis aspernatur ea similique magni doloribus asperiores ullam recusandae culpa nulla architecto distinctio? Natus!',
+            img: './img/img2.jpg'
+        };
+
+        const renderPost = (post) => {
+                return (
+                    <div className = 'main'>
+                        <h2>{post.name}</h2>
+                        <img className = 'avatar' src = {post.avatar}/>
+                        <p>Date: {post.date}</p>
+                        <p>{post.text}</p>
+                        {post.img && <img className = 'imgInPost' src = {post.img}/>}
+                    </div>
+                )
+        };
+
+        console.log(post1.img);
+
+        ReactDOM.render(
+            <div>
+                {renderPost(post1)}
+                {renderPost(post2)}
+                
+            </div>
+                
+
+            , 
+            document.getElementById('root')
+        )
+        
+    </script>
+    
+</body>
+</html>

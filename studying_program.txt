@@ -1,0 +1,22 @@
+Ось матеріал за першу і другу лекції:
+
+    - Що таке front-end application
+    - Як запустити browser application
+    - Що робить React. Virtual DOM
+        - Reconciliation
+    - JSX
+        - Як запускати програму з JSX?
+        - Fragment
+        - Embedded Expressions
+        - Booleans, Null, and Undefined Are Ignored
+        - Conditional rendering
+            - ternary operator
+            - guard and default operators
+        - attributes
+            - className
+            - style
+            - spread attributes
+            - Props Default to “True”
+            - обробники подій
+        - render functions
+        - function returns (parentheses)
