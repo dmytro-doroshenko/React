@@ -59,28 +59,35 @@
             img: './img/img2.jpg'
         };
 
+        let post1IsClosed = false;
+        let post2IsClosed = false;
+
+
 
         //        UI
 
         const Post = props => {
-            const {post} = props;
-                return (
+            const {post, isClosed, onCloseRequest} = props;
+                return (isClosed || (
                     <div className = 'main'>
                         <h2>{post.name}</h2>
                         <img className = 'avatar' src = {post.avatar}/>
                         <p>Date: {post.date}</p>
                         <p>{post.text}</p>
                         {post.img && <img className = 'imgInPost' src = {post.img}/>}
-                    </div>
+                        <div>
+                            <button onClick={onCloseRequest}>Close</button>
+                        </div>
+                    </div>)
                 )
         };
 
         const App = props =>{
-            const {loaded, post1, post2} = props.data
+            const {loaded, post1, post2, post1IsClosed, post2IsClosed, closePost1, closePost2} = props.data
             return ( loaded ? (
                 <Fragment>
-                    <Post post={post1}/>
-                    <Post post={post2}/>
+                     <Post post={post1} isClosed = {post1IsClosed} onCloseRequest={closePost1}/>
+                     <Post post={post2} isClosed = {post2IsClosed} onCloseRequest={closePost2}/>
                 </Fragment>
             ) : (
                 <div>Please wait, loading...</div>
@@ -90,7 +97,7 @@
         }
 
     function renderUI() {
-        ReactDOM.render(<App data = {{loaded, post1, post2}}/>, document.getElementById('root'));
+        ReactDOM.render(<App data = {{loaded, post1, post2, post1IsClosed, post2IsClosed, closePost1, closePost2}}/>, document.getElementById('root'));
     }
 
 
@@ -103,8 +110,18 @@
         renderUI();
     };
 
+    const closePost1 = () => {
+        post1IsClosed = true;
+        renderUI();
+    };
+
+    const closePost2 = () => {
+        post2IsClosed = true;
+        renderUI();
+    };
+
     setTimeout(setLoaded, 1000);
-        
+         
     </script>
     
 </body>
