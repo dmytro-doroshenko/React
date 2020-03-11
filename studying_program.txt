@@ -1,22 +1,59 @@
-Ось матеріал за першу і другу лекції:
-
+- Основні концепції
     - Що таке front-end application
     - Як запустити browser application
     - Що робить React. Virtual DOM
         - Reconciliation
     - JSX
         - Як запускати програму з JSX?
+            - babel-standalone
+            - create-react-app
         - Fragment
         - Embedded Expressions
         - Booleans, Null, and Undefined Are Ignored
         - Conditional rendering
             - ternary operator
             - guard and default operators
-        - attributes
+        - attributes/props
             - className
             - style
-            - spread attributes
             - Props Default to “True”
+            - spread attributes
             - обробники подій
+        - React.createElement second argument / children prop
         - render functions
         - function returns (parentheses)
+    - Списки і ключі
+    - Компонента (functional)
+        - React.createElement first argument
+        - Reusablity, composability
+        - Props
+            - Render Props
+                - Pattern: <List renderListItem={item => <span>{item}</span>} />
+            - Children prop (props.children)
+            - Functions as children
+                - Pattern: <Cmp>{value => <span>{value}</span>}</Cmp>
+    - One way data flow (read-only props)
+        - problem of passing data and callbacks down through the component hierarchy
+- Context API
+    - as a possible solution to the prev problem
+    - also "function as children" pattern demo
+- Stateful компоненти (класові компоненти)
+    - constructor(props), super(props), this.props
+    - instance fields, forceUpdate()
+    - State
+        - this.state, setState()
+        - No direct mutation
+        - Merging state
+        - Async and batched
+    - Event handlers context
+    - Життєвий цикл
+        - componentDidMount, componentWillUnmount
+        - componentWillUpdate, componentDidUpdate
+        - props update
+        - static getDerivedStateFromProps
+    - Live-cycle usage examples
+        - timer
+        - data fetching ("id" comes from props)
+    - Architectural concerns
+        - contrast to separated business logic
+        - containers VS components
