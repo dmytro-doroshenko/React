@@ -13,3 +13,4 @@ Consultation 4 13.03.2020: https://www.youtube.com/watch?v=kqp7WvywrXI
 React reborn lesson 1. 16.03.2020: https://www.youtube.com/watch?v=-p4iYHfOdf0
 React workshop 1. 17.03.2020: https://www.youtube.com/watch?v=Be7GgStbNdE
 React reborn lesson 2. 18.03.2020: https://www.youtube.com/watch?v=aDYBl1w3Jvg
+React workshop 2. 19.03.2020: https://www.youtube.com/watch?v=IFFDGN2CxiM
