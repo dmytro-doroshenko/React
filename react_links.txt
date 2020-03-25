@@ -16,3 +16,4 @@ React reborn lesson 2. 18.03.2020: https://www.youtube.com/watch?v=aDYBl1w3Jvg
 React workshop 2. 19.03.2020: https://www.youtube.com/watch?v=IFFDGN2CxiM
 React rebotn lesson 3. 20.03.2020: https://www.youtube.com/watch?v=mdZCUY7PV90
 React rebotn lesson 4. 23.03.2020: https://www.youtube.com/watch?v=3SeyIFcISbo
+React workshop 3. 24.03.2020 (eouter, pagination, search query): https://www.youtube.com/watch?v=nmYWremiCKc
