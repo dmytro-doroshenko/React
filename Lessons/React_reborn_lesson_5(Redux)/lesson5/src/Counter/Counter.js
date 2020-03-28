@@ -1,10 +1,10 @@
 import React from "react";
 import { connect } from 'react-redux';
+import {incrementActionCreator, decrementActionCreator} from "../actionCreators/counter";
 
 
 const Counter = ({counter, isAuth, increment, decrement}) => {
 
-    console.log({counter, isAuth, increment, decrement});
     return (
         <div>
             <button onClick={increment}>Increment</button>
@@ -18,12 +18,11 @@ const mapStateToProps = (state) => {
     return {
         counter: state.counter,
         isAuth: state.userIsAuth,
+        toDos: state.toDos,
     }
 };
 
-const incrementActionCreator = () => ({type: 'INCREMENT'});
 
-const decrementActionCreator = () => ({type: 'DECREMENT'});
 
 // const mapDispatchToProps = (dispatch) => {
 //     return {
