@@ -20,3 +20,4 @@ React workshop 3 (router, pagination, search query). 24.03.2020: https://www.you
 React reborn lesson 5 (Redux). 25.03.2020: https://www.youtube.com/watch?v=l-9QxLj5SOM
 React workshop 4 (redux setup). 26,03,2020: https://www.youtube.com/watch?v=QUBH08nj6ak
 React reborn lesson 6 (Redux, middleware). 27.03.2020: https://www.youtube.com/watch?v=XR-Yd-C7U0k
+React reborn lesson 7 (React custom store). 30.03.2020: https://www.youtube.com/watch?v=DrZiXbXaFzw&feature=youtu.be
